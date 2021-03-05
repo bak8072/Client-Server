@@ -71,5 +71,5 @@
       clientSocket.close()
 
 
-if __name__ == '__main__':
-    smtp_client(1025, '127.0.0.1')
+    if __name__ == '__main__':
+      smtp_client(1025, '127.0.0.1')
