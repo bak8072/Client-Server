@@ -56,8 +56,9 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     clientSocket.send(Subject.encode())
     message = raw_impute("Enter your message:r\n")
     clientSocket.send(date.encode())
-    # Message ends with a single period.
     clientSocket.send(msg.encode())
+    
+    # Message ends with a single period.
     clientSocket.send(endmsg.encode())
     recv_msg = clientSocket.recv(1024)
     print(Response after sending message body:"+recv_msge.decode())
