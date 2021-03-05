@@ -1,7 +1,7 @@
-from socket import *
+    from socket import *
 
 
-def smtp_client(port=1025, mailserver='127.0.0.1'):
+    def smtp_client(port=1025, mailserver='127.0.0.1'):
     msg = "\r\n Learning Computer Networking"
     endmsg = "\r\n.\r\n"
 
@@ -35,7 +35,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
           print('250 reply not received from server.')
 
     # Send RCPT TO command and print server response.
-    # rcptTo = "RCPT TO: <destination@gmail.com>\r\n"
+      rcptTo = "RCPT TO: <destination@gmail.com>\r\n"
       clientsSocket.send(rcptTo.encode())
       recv3 = clientSocket.recv(1024)
       print("After MAIL FROM command: "+recv3)
