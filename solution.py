@@ -10,7 +10,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Create socket called clientSocket and establish a TCP connection with mailserver and port
     clientSocket = socket(AF_INET, SOCK_STREAM)
-    clientSocket.connect(mailserver)
+    clientSocket.connect((mailServer, mailPort))
 
     recv = clientSocket.recv(1024).decode()
     print(recv)
@@ -61,7 +61,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     # Message ends with a single period.
     clientSocket.send(endmsg.encode())
     recv_msg = clientSocket.recv(1024)
-    print(Response after sending message body:"+recv_msge.decode())
+    print("Response after sending message body:"+recv_msge.decode())
     if recv1[:3] != '250':
         print('250 reply not received from server.')
 
