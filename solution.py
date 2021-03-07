@@ -53,7 +53,6 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Send message data.
     message = raw_impute("Enter your message:r\n")
-    subject = "Subject: testing my client\r\n\r\n"
    
     # Message ends with a single period.
     clientSocket.send(endmsg.encode())
